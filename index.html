@@ -35,22 +35,7 @@ var trackOutboundLink = function(url) {
 	<div id="gamebox">
 		<img class="sans" src="img/sans.gif" />
 		<div id="speech_bubble" class="closed">
-
-		</div>
-
-		<div id="select_text">Option:</div>
-			
-		<div class="diff-option">GAME SPEED</div>
-		<input type="number"></input>
 		
-		<div class="diff-option">HEALTH</div>
-		<input type="number"></input>
-	
-		<div class="diff-option">BONE HITBOXES</div>
-		<input type="number"></input>
-	
-		</div>
-
 		<div id="gameplay_area" class="closed">
 			<div id="heartbox"></div>
 			<div>
@@ -69,6 +54,24 @@ var trackOutboundLink = function(url) {
 			</div>
 		</div>
 
+		</div>
+
+		<div id="select_text">Option:</div>
+			
+		<form>
+			<div class="diff-option">GAME SPEED</div>
+			<input type="number" id="game_settings_speed"></input> <br>
+		
+			<div class="diff-option">HEALTH</div>
+			<input type="number" id="game_settings_speed"></input> <br>
+	
+			<div class="diff-option">Hitbox Tolerance</div>
+			<input type="number" id="game_settings_></input>
+		</form>
+	
+		</div>
+
+		
 	</div>
 
 	<audio id="bgm1" src="audio/megalovania.ogg" loop>
