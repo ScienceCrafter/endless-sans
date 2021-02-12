@@ -52,7 +52,7 @@ BattleScene.prototype.update = function(delta) {
 		if (collided == true) {
 			document.getElementById("se_damage").currentTime = 0;
 			document.getElementById("se_damage").play();
-			if (this.difficulty == "easy") {
+			if (this.difficulty == "tank-easy" || this.difficulty == "tank-hard") {
 				heart.hp = Math.max(0, heart.hp - delta);
 				document.getElementById("hp").innerHTML = (heart.hp + 0.00499999999).toFixed(2);
 			} else {
@@ -121,17 +121,22 @@ BattleScene.prototype.resetGame = function(diff_level) {
 	this.final_message = false;
 	this.sendNewBones(default_bone_set);
 	switch (diff_level) {
-		case "easy":
+		case "tank-easy":
 			heart.tolerance = 0;
 			this.play_speed = 1;
 			document.getElementById("love").innerHTML = "1";
 			break;
-		case "medium":
+		case "weak-easy":
 			heart.tolerance = 2;
 			this.play_speed = 1;
 			document.getElementById("love").innerHTML = "10";
 			break;
-		case "hard":
+		case "tank-hard":
+			heart.tolerance = 2;
+			this.play_speed = 1.5;
+			document.getElementById("love").innerHTML = "9";
+			break;
+		case "weak-hard":
 			heart.tolerance = 2;
 			this.play_speed = 1.5;
 			document.getElementById("love").innerHTML = "99";
