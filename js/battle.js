@@ -108,7 +108,7 @@ BattleScene.prototype.clearAllBones = function() {
 BattleScene.prototype.resetGame = function(diff_level) {
 	this.clearAllBones();
 	this.difficulty = diff_level;
-	this.heart.hp = 1;
+	this.heart.hp = document.getElementById("Health");
 	document.getElementById("hp").innerHTML = "1";
 	document.getElementById("hp_yellow_bar").style.width = "20px";
 	this.heart.pos_x = 160;
