@@ -123,7 +123,7 @@ BattleScene.prototype.resetGame = function(diff_level) {
 	switch (diff_level) {
 		case "easy":
 			heart.tolerance = document.getElementById("game_settings_tolerance");
-			this.play_speed = document.getElementById("game_settings_speed");
+			this.play_speed = 1;
 			document.getElementById("love").innerHTML = "custom";
 			break;
 	}
