@@ -121,25 +121,10 @@ BattleScene.prototype.resetGame = function(diff_level) {
 	this.final_message = false;
 	this.sendNewBones(default_bone_set);
 	switch (diff_level) {
-		case "tank-easy":
-			heart.tolerance = 0;
-			this.play_speed = 1;
-			document.getElementById("love").innerHTML = "1";
-			break;
-		case "weak-easy":
-			heart.tolerance = 2;
-			this.play_speed = 1;
-			document.getElementById("love").innerHTML = "10";
-			break;
-		case "tank-hard":
-			heart.tolerance = 2;
-			this.play_speed = 1.5;
-			document.getElementById("love").innerHTML = "9";
-			break;
-		case "weak-hard":
-			heart.tolerance = 2;
-			this.play_speed = 1.5;
-			document.getElementById("love").innerHTML = "99";
+		case "easy":
+			heart.tolerance = document.getElementById("game_settings_tolerance");
+			this.play_speed = document.getElementById("game_settings_speed");
+			document.getElementById("love").innerHTML = "custom";
 			break;
 	}
 	document.getElementById("select_difficulty").className = "closed";
