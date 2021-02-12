@@ -2,9 +2,10 @@ function Menu(){
 
 	this.current_option = 0;
 	this.options = [
-		"easy",
-		"medium",
-		"hard"
+		"tank-easy",
+		"weak-easy",
+		"tank-hard",
+		"weak-hard"
 	];
 
 }
