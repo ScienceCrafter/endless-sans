@@ -60,20 +60,31 @@ var trackOutboundLink = function(url) {
 		<div id="select_text">Settings:</div>
 			
 		<div class="diff-option">Game Speed</div>
-		<input type="number" id="game_settings_speed"></input> <br>
+		<input type="number" id="game_settings_speed" value=1></input> <br>
 		
 		<div class="diff-option">Health</div>
-		<input type="number" id="game_settings_health"></input> <br>
+		<input type="number" id="game_settings_health" value=1></input> <br>
 	
 		<div class="diff-option">Hitbox Size</div>
-		<input type="number" id="game_settings_tolerance"></input> <br>
+		<input type="number" id="game_settings_tolerance" value=0></input> <br>
 
 			<div id="select_difficulty">
 				<div class="diff-option" id="option0">START</div>
 			</div>
 
-		<button onclick="Preset(1)"></button>
+		<p>Default Presets:</p> <br>
 
+		<button onclick="Preset("easy")">Good</button>
+		<button onclick="Preset("medium")">Bad</button>
+		<button onclick="Preset("hard")">Really Bad</button> <br>
+
+		<p>Custom Presets:</p> <br>
+
+		<button onclick="Preset("friendly")">Friendly</button>
+		<button onclick="Preset("healthy hard")">Bad (+ Health)</button>
+		<button onclick="Preset("nightmare")">Nightmare</button>
+		<button onclick="Preset("impossible")">Impossible</button>
+		<button onclick="Preset("ninja")">Ninja</button> <br>
 		
 	</div>
 
