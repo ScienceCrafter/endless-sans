@@ -52,7 +52,7 @@ BattleScene.prototype.update = function(delta) {
 		if (collided == true) {
 			document.getElementById("se_damage").currentTime = 0;
 			document.getElementById("se_damage").play();
-			if (this.heart.hp != NaN) {
+			if (parseInt(document.getElementById("game_settings_health").value) != 99) {
 				heart.hp = Math.max(0, heart.hp - delta);
 				document.getElementById("hp").innerHTML = (heart.hp + 0.00499999999).toFixed(2);
 			} else {
@@ -62,7 +62,7 @@ BattleScene.prototype.update = function(delta) {
 			document.getElementById("hp_yellow_bar").style.width = (heart.hp * 20) + "px";
 		}
 
-		if (heart.hp <= 0 || heart.hp = NaN) {
+		if (heart.hp <= 0) {
 			this.final_time = this.elapsed_time;
 			this.elapsed_time = 0;
 			this.play_state = "gameover";
