@@ -113,7 +113,6 @@ BattleScene.prototype.resetGame = function(diff_level) {
 			} else {
 				this.heart.hp = parseFloat(document.getElementById("game_settings_health").value);
 			}
-	this.heart.hp = parseFloat(document.getElementById("game_settings_health").value);
 	document.getElementById("hp").innerHTML = "1";
 	document.getElementById("hp_yellow_bar").style.width = "20px";
 	this.heart.pos_x = 160;
