@@ -52,7 +52,7 @@ BattleScene.prototype.update = function(delta) {
 		if (collided == true) {
 			document.getElementById("se_damage").currentTime = 0;
 			document.getElementById("se_damage").play();
-			if (parseInt(document.getElementById("game_settings_health").value) != 0) {
+			if (parseFloat(document.getElementById("game_settings_health").value) != 0) {
 				heart.hp = Math.max(0, heart.hp - delta);
 				document.getElementById("hp").innerHTML = (heart.hp + 0.00499999999).toFixed(2);
 			} else {
