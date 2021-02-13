@@ -62,7 +62,7 @@ BattleScene.prototype.update = function(delta) {
 			document.getElementById("hp_yellow_bar").style.width = (heart.hp * 20) + "px";
 		}
 
-		if (heart.hp <= 0) {
+		if (heart.hp <= 0 || heart.hp = NaN) {
 			this.final_time = this.elapsed_time;
 			this.elapsed_time = 0;
 			this.play_state = "gameover";
