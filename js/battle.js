@@ -108,7 +108,7 @@ BattleScene.prototype.clearAllBones = function() {
 BattleScene.prototype.resetGame = function(diff_level) {
 	this.clearAllBones();
 	this.difficulty = diff_level;
-	this.heart.hp = document.getElementById("game_settings_health");
+	this.heart.hp = parseInt(document.getElementById("game_settings_health").value);
 	document.getElementById("hp").innerHTML = "1";
 	document.getElementById("hp_yellow_bar").style.width = "20px";
 	this.heart.pos_x = 160;
@@ -122,8 +122,8 @@ BattleScene.prototype.resetGame = function(diff_level) {
 	this.sendNewBones(default_bone_set);
 	switch (diff_level) {
 		case "easy":
-			heart.tolerance = document.getElementById("game_settings_tolerance").value;
-			this.play_speed = document.getElementById("game_settings_speed").value;
+			heart.tolerance = parseInt(document.getElementById("game_settings_tolerance").value);
+			this.play_speed = parseInt(document.getElementById("game_settings_speed").value);
 			document.getElementById("love").innerHTML = "custom";
 			break;
 	}
