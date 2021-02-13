@@ -122,8 +122,8 @@ BattleScene.prototype.resetGame = function(diff_level) {
 	this.sendNewBones(default_bone_set);
 	switch (diff_level) {
 		case "easy":
-			heart.tolerance = document.getElementById("game_settings_tolerance");
-			this.play_speed = 1;
+			heart.tolerance = document.getElementById("game_settings_tolerance").value;
+			this.play_speed = document.getElementById("game_settings_speed").value;
 			document.getElementById("love").innerHTML = "custom";
 			break;
 	}
