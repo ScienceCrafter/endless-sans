@@ -52,7 +52,7 @@ BattleScene.prototype.update = function(delta) {
 		if (collided == true) {
 			document.getElementById("se_damage").currentTime = 0;
 			document.getElementById("se_damage").play();
-			if (this.difficulty == "tank-easy" || this.difficulty == "tank-hard") {
+			if (this.heart.hp != NaN) {
 				heart.hp = Math.max(0, heart.hp - delta);
 				document.getElementById("hp").innerHTML = (heart.hp + 0.00499999999).toFixed(2);
 			} else {
