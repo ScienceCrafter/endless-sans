@@ -52,7 +52,7 @@ BattleScene.prototype.update = function(delta) {
 		if (collided == true) {
 			document.getElementById("se_damage").currentTime = 0;
 			document.getElementById("se_damage").play();
-			if (parseInt(document.getElementById("game_settings_health").value) != 99) {
+			if (parseInt(document.getElementById("game_settings_health").value) != 0) {
 				heart.hp = Math.max(0, heart.hp - delta);
 				document.getElementById("hp").innerHTML = (heart.hp + 0.00499999999).toFixed(2);
 			} else {
@@ -108,7 +108,12 @@ BattleScene.prototype.clearAllBones = function() {
 BattleScene.prototype.resetGame = function(diff_level) {
 	this.clearAllBones();
 	this.difficulty = diff_level;
-	this.heart.hp = parseInt(document.getElementById("game_settings_health").value);
+	if (parseFloat(document.getElementById("game_settings_health").value) == 0) {
+				this.heart.hp = 1;
+			} else {
+				this.heart.hp = parseFloat(document.getElementById("game_settings_health").value);
+			}
+	this.heart.hp = parseFloat(document.getElementById("game_settings_health").value);
 	document.getElementById("hp").innerHTML = "1";
 	document.getElementById("hp_yellow_bar").style.width = "20px";
 	this.heart.pos_x = 160;
@@ -122,8 +127,8 @@ BattleScene.prototype.resetGame = function(diff_level) {
 	this.sendNewBones(default_bone_set);
 	switch (diff_level) {
 		case "easy":
-			heart.tolerance = parseInt(document.getElementById("game_settings_tolerance").value);
-			this.play_speed = parseInt(document.getElementById("game_settings_speed").value);
+			heart.tolerance = parseFloat(document.getElementById("game_settings_tolerance").value);
+			this.play_speed = parseFloat(document.getElementById("game_settings_speed").value);
 			document.getElementById("love").innerHTML = "custom";
 			break;
 	}
