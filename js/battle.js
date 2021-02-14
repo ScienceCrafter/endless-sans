@@ -60,6 +60,7 @@ BattleScene.prototype.update = function(delta) {
 				document.getElementById("hp").innerHTML = "0";
 			}
 			document.getElementById("hp_yellow_bar").style.width = (heart.hp * 20) + "px";
+			document.getElementById("love").innerHTML = this.elapsed_time / (100 * (parseFloat(document.getElementById("game_settings_health").value) - heart.hp)
 		}
 
 		if (heart.hp <= 0) {
