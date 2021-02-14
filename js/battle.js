@@ -114,7 +114,7 @@ BattleScene.prototype.resetGame = function(diff_level) {
 				this.heart.hp = parseFloat(document.getElementById("game_settings_health").value);
 			}
 	document.getElementById("hp").innerHTML = "1";
-	document.getElementById("hp_yellow_bar").style.width = "20px";
+	document.getElementById("hp_yellow_bar").style.width = (heart.hp * 20) + "px";
 	this.heart.pos_x = 160;
 	this.heart.pos_y = 112;
 	this.heart.update(0);
@@ -128,7 +128,7 @@ BattleScene.prototype.resetGame = function(diff_level) {
 		case "easy":
 			heart.tolerance = parseFloat(document.getElementById("game_settings_tolerance").value);
 			this.play_speed = parseFloat(document.getElementById("game_settings_speed").value);
-			document.getElementById("love").innerHTML = "custom";
+			document.getElementById("love").innerHTML = "0";
 			break;
 	}
 	document.getElementById("select_difficulty").className = "closed";
