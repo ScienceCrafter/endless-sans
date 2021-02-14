@@ -24,16 +24,10 @@ var default_bone_set = {
 		[-500, 168, 16, 128, 160],
 		[-500, 24, 16, 128, 160],
 	],
-	if (document.getElementById("game_settings_other").value.includes("only_hurdles") {
-		next_bone_sets: [
-		"4A", "5A"
-		]
-	} else {
-		next_bone_sets: [
+	next_bone_sets: [
 		// "1L", "1R", "2L", "2R", "3",
 		"6L", "6R"
-		]
-	}
+	],
 };
 
 
@@ -202,15 +196,9 @@ var bone_set_4C = {
 		[328, 168, 16, 128, -240],
 		[328, 24, 16, 128, -240],
 	],
-	if (document.getElementById("game_settings_other").value.includes("only_hurdles") {
-		next_bone_sets: [
-		"5A"
-		]
-	} else {
-		next_bone_sets: [
+	next_bone_sets: [
 		"1R"
-		],
-	}
+	],
 };
 
 
@@ -271,15 +259,9 @@ var bone_set_5C = {
 		[-8, 168, 16, 128, 240],
 		[-8, 24, 16, 128, 240],
 	],
-	if (document.getElementById("game_settings_other").value.includes("only_hurdles") {
-		next_bone_sets: [
-		"4A"
-		]
-	} else {
-		next_bone_sets: [
+	next_bone_sets: [
 		"1L"
-		],
-	}
+	],
 };
 
 
